@@ -4,9 +4,7 @@ locals {
     environment  = var.tag_environment
     team         = var.tag_team
     created_with = "Terraform"
-    repository   = "git" #link kum tvoeto repo 
+    repository   = "https://github.com/peshhe/assignment-terraform"
     product      = var.tag_product
   }
-  # Naming convention to be used for resources
-  # name = "${var.product}-${var.environment}"
 }
