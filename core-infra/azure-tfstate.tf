@@ -16,7 +16,7 @@ resource "azurerm_storage_account" "sa-tfstate" {
 
   tags = local.common_tags
 
-  depends_on = [ azurerm_resource_group.rg-tfstate ]
+  depends_on = [azurerm_resource_group.rg-tfstate]
 }
 
 # Create the Storage Container for the Terraform State
@@ -25,5 +25,5 @@ resource "azurerm_storage_container" "sc-tfstate" {
   storage_account_name  = var.sa_tfstate
   container_access_type = "private"
 
-  depends_on = [ azurerm_storage_account.sa-tfstate ]
+  depends_on = [azurerm_storage_account.sa-tfstate]
 }
